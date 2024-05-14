@@ -1,4 +1,6 @@
 title: Hunter Ashburn
+headshot-image: /assets/images/suit.jpg
+headshot-image-alt: "Hunter Headshot"
 
 include:
   - _pages
