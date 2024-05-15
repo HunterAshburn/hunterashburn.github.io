@@ -4,11 +4,12 @@ layout: default
 
     <section class="hunter">
         <div class="introduction">
-            <h1 class="attention">{{ page.introduction.header1 }}</h1>
+            <h1>{{ page.introduction.header1 }}</h1>
             <h2>{{ page.introduction.header2 }}</h2>
             <h3>{{ page.introduction.header3 }}</h3>
+            {%- include in-touch-button.html -%}
         </div>
-        <img src="{{ site.headshot-image }}" alt="{{ site.headshot-image-alt }}">
+        {%- include headshot-image.html -%}
     </section>
 
     <section class="toolbox">

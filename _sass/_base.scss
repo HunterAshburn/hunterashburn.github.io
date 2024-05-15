@@ -7,10 +7,13 @@
     padding: 0;
 }
 
+main {
+    margin: $spacing-unit;
+}
+
 body {
     font-family: $font-family;
     background-color: $background-primary-color;
-    line-height: $line-height;
     -webkit-font-smoothing: antialiased;
     -webkit-text-size-adjust: 100%;
 }
@@ -24,6 +27,10 @@ input, button, textarea, select {
     font: inherit;
 }
 
+button {
+    width: fit-content;
+}
+
 p, h1, h2, h3, h4, h5, h6 {
     overflow-wrap: break-word;
 }
@@ -32,10 +39,27 @@ h1, h2, h3, h4, h5, h6 {
     color: $text-primary-color;
 }
 
-p {
-    color: $text-secondary-color;
+h1 {
+    font-size: 2.5em;
 }
 
-.attention {
+h2 {
+    font-size: 2em;
+}
+
+h3 {
+    font-size: 1.5em;
+}
+
+p {
+    color: $text-secondary-color;
+    line-height: 1.5;
+}
+
+section {
+    width: 100%;
+}
+
+span {
     color: $attention-color;
 }
