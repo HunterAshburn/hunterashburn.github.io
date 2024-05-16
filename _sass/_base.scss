@@ -9,6 +9,7 @@
 
 main {
     margin: $spacing-unit;
+    max-width: 1600px;
 }
 
 body {
@@ -16,6 +17,8 @@ body {
     background-color: $background-primary-color;
     -webkit-font-smoothing: antialiased;
     -webkit-text-size-adjust: 100%;
+    display: flex;
+    justify-content: center;
 }
   
 img, picture, video, canvas, svg {
@@ -29,6 +32,7 @@ input, button, textarea, select {
 
 button {
     width: fit-content;
+    @include responsive-font-size(1em, $weak-size-multiplier-breakpoints);
 }
 
 p, h1, h2, h3, h4, h5, h6 {
@@ -40,20 +44,21 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    font-size: 2.5em;
+    @include responsive-font-size(2.5em, $size-multiplier-breakpoints);
 }
 
 h2 {
-    font-size: 2em;
+    @include responsive-font-size(2em, $size-multiplier-breakpoints);
 }
 
 h3 {
-    font-size: 1.5em;
+    @include responsive-font-size(1.5em, $size-multiplier-breakpoints);
 }
 
 p {
     color: $text-secondary-color;
     line-height: 1.5;
+    @include responsive-font-size(1em, $weak-size-multiplier-breakpoints);
 }
 
 section {

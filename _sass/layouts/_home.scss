@@ -1,11 +1,18 @@
 .hunter {
     display: grid;
     grid-template-columns: auto auto;
+    gap: $spacing-unit * 2;
+    align-items: center;
 }
 
 .introduction {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin: 0px $spacing-unit;
+    margin-left: $spacing-unit * 2;
+}
+
+.intro-heading-2 {
+    margin-bottom: $spacing-unit * 2;
+}
+
+.intro-heading-3 {
+    margin-bottom: $spacing-unit * 2;
 }

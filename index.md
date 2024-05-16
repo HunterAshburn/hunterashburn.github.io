@@ -2,9 +2,9 @@
 layout: home
 
 introduction:
-    header1: <span>Hello! I am Hunter.</span>
-    header2: Developer and Software Engineer
-    header3: |
+    heading1: <span>Hello! I am Hunter.</span>
+    heading2: Developer and Software Engineer
+    heading3: |
         Well rounded.
         <br>Creative.
         <br>Detail oriented.
