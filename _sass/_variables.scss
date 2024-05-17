@@ -4,6 +4,7 @@ $font-family:                   -apple-system, BlinkMacSystemFont, "Segoe UI", R
 
 $text-primary-color:            #535C91 !default;
 $text-secondary-color:          #9290C3 !default;
+$light-text-color:              #ffffff !default;
 
 $background-primary-color:      #0F0F0F !default;
 $background-secondary-color:    #070F2B !default;
@@ -14,35 +15,11 @@ $line-secondary-color:          #9290C3 !default;
 
 $attention-color:               #F97300 !default;
 
+$shadow-color:                  #0000003f !default;
+
 $spacing-unit:                  20px !default;
 
 
-// IDEA FOR LATER: move breakpoints to a separate scss file
-
-$weak-size-multiplier-breakpoints: (
-    0px: 0.9,
-    600px:  0.925,
-    800px:  0.95,
-    1000px: 0.975,
-    1200px: 1,
-    1400px: 1.1,
-    1600px: 1.2
-);
-
-$size-multiplier-breakpoints: (
-    0px: 0.8,
-    600px:  0.85,
-    800px:  0.9,
-    1000px: 0.95,
-    1200px: 1,
-    1400px: 1.5,
-    1600px: 2
-);
-
-@mixin responsive-font-size($base-font-size, $breakpoints) {
-    @each $breakpoint, $multiplier in $breakpoints {
-        @media screen and (min-width: $breakpoint) {
-            font-size: $base-font-size * $multiplier;
-        }
-    }
-}
+@import 
+    "breakpoints"
+;

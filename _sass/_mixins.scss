@@ -1,0 +1,15 @@
+@mixin responsive-font-size($base-font-size, $breakpoints) {
+    @each $breakpoint, $multiplier in $breakpoints {
+        @media screen and (min-width: $breakpoint) {
+            font-size: $base-font-size * $multiplier;
+        }
+    }
+}
+
+@mixin responsive-image-max-height($base-image-size, $breakpoints) {
+    @each $breakpoint, $multiplier in $breakpoints {
+        @media screen and (min-width: $breakpoint) {
+            max-height: $base-image-size * $multiplier;
+        }
+    }
+}

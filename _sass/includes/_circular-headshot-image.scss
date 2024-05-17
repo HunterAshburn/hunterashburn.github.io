@@ -1,0 +1,4 @@
+.circular-headshot-image {
+    border-radius: 100%;
+    @include responsive-image-max-height(360px, $image-max-height-multiplier-breakpoints);
+}
