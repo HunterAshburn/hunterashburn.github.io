@@ -85,13 +85,13 @@ function drawHeadshot() {
 
 // Ripple effect on mouse move
 canvas.addEventListener('mousemove', function(event) {
-    const mouseX = event.clientX - canvas.offsetLeft;
-    const mouseY = event.clientY - canvas.offsetTop;
-    const dx = mouseX - cx;
-    const dy = mouseY - cy;
-    const distance = Math.sqrt(dx * dx + dy * dy);
-    if (distance < radius) {
-        console.log("inside circle");
+    const mouseX = event.clientX; //- canvas.offsetLeft;
+    const mouseY = event.clientY; //- canvas.offsetTop;
+    //const dx = mouseX - cx;
+    //const dy = mouseY - cy;
+    const distance = Math.sqrt(Math.pow(cx - mouseX, 2) + Math.pow(cy - mouseY, 2));
+    if (distance - 20 < radius) {
+        console.log("inside circle beep");
     }
 });
 
