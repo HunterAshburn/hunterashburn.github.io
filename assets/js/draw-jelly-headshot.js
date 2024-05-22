@@ -29,21 +29,36 @@ var ampMax;
 var ampTimer = 0;
 var ampDuration = 0.5;
 
+var currentJellyJiggle = 0;
+var jellyJiggleDecay = 100;
+var jellyJiggleMax = 350;
+
 var currentSineCount = 3;
 var sineTarget = 0;
 var sineCountLower = 3;
-var sineCountUpper = 15;
+var sineCountUpper = 3;
 var sineTimer = 0;
 var sineDuration = 1;
 
-var rotationSpeed1 = 0.35;
+var rotationSpeed1 = -0.2;
 var lastRotation1 = 0;
 
-var rotationSpeed2 = 0.75;
+var rotationSpeed2 = 0.5;
 var lastRotation2 = 90;
 
-var rotationSpeed3 = 1;
+var rotationSpeed3 = 0.3;
 var lastRotation3 = 180;
+
+var rotationSpeed4 = -0.4;
+var lastRotation4 = 270;
+
+var currentTranslation1 = 0;
+var translationSpeed1 = 20;
+var currentTranslation2 = 0;
+var translationSpeed2 = 15;
+var currentTranslation3 = 0;
+var translationSpeed3 = 10;
+var translationBoundary = 50;
 
 var lastTime = 0;
 
@@ -147,6 +162,36 @@ function animate(currentTime) {
         }
     }
 
+    if (currentTranslation1 >= translationBoundary) {
+        translationSpeed1 = -Math.abs(translationSpeed1);
+    } else if (currentTranslation1 <= -translationBoundary) {
+        translationSpeed1 = Math.abs(translationSpeed1);
+    }
+    currentTranslation1 += translationSpeed1 * deltaTime;
+
+    if (currentTranslation2 >= translationBoundary) {
+        translationSpeed2 = -Math.abs(translationSpeed2);
+    } else if (currentTranslation2 <= -translationBoundary) {
+        translationSpeed2 = Math.abs(translationSpeed2);
+    }
+    currentTranslation2 += translationSpeed2 * deltaTime;
+
+    if (currentAmp >= ampBoundary) {
+        if (ampBoundary > ampBoundaryMin) {
+            ampBoundary -= ampBoundaryDecay;
+        }
+        ampIncrement = -Math.abs(ampIncrement);
+    } else if (currentAmp <= -ampBoundary) {
+        if (ampBoundary > ampBoundaryMin) {
+            ampBoundary -= ampBoundaryDecay;   
+        }
+        ampIncrement = Math.abs(ampIncrement);
+    }
+    if (currentJellyJiggle > 0) {
+        currentJellyJiggle -= jellyJiggleDecay * deltaTime;
+    }
+    currentAmp += ampIncrement * deltaTime * currentJellyJiggle;
+    
     //currentAmp = changeJellyValue(currentAmp, ampLower, ampUpper);
     //currentSineCount = changeJellyValue(currentSineCount, sineCountLower, sineCountUpper);
 
@@ -189,7 +234,6 @@ function drawJellyCircle(deltaTime) {
         ctx.rotate(lastRotation1);
         ctx.translate(-centerX, -centerY);
         ampDuration = 3;
-
         //ctx.save();
         //ctx.setTransform(1, 0, 0, 1, 0, 0);
         //lastRotation2 = lastRotation2 + rotationSpeed2 * deltaTime;
@@ -208,13 +252,58 @@ function drawJellyCircle(deltaTime) {
         lastRotation1 = 0;
     }
 
-    ctx.closePath();
+    ctx.save();
+    ctx.setTransform(1, 0, 0, 1, 0, 0);
+    lastRotation2 = lastRotation2 + rotationSpeed2 * deltaTime;
+    ctx.translate(centerX, centerY);
+    ctx.rotate(lastRotation2);
+    ctx.translate(-centerX, -centerY);
+    ctx.translate(currentTranslation1, currentTranslation1);
+    for(var i=0;i<360;i++){
+        var angle=i*Math.PI/180;
+        var pt=sineCircleXYatAngle(centerX,centerY,radius-50,currentAmp,angle,currentSineCount);
+        ctx.lineTo(pt.x,pt.y);
+    }
+    ctx.fill();
+    ctx.restore();
+
+    ctx.save();
+    ctx.setTransform(1, 0, 0, 1, 0, 0);
+    lastRotation3 = lastRotation3 + rotationSpeed3 * deltaTime;
+    ctx.translate(centerX, centerY);
+    ctx.rotate(lastRotation3);
+    ctx.translate(-centerX, -centerY);
+    ctx.translate(currentTranslation2, currentTranslation2);
+    for(var i=0;i<360;i++){
+        var angle=i*Math.PI/180;
+        var pt=sineCircleXYatAngle(centerX,centerY,radius-50,currentAmp,angle,currentSineCount);
+        ctx.lineTo(pt.x,pt.y);
+    }
+    ctx.fill();
+    ctx.restore();
+
+    ctx.save();
+    ctx.setTransform(1, 0, 0, 1, 0, 0);
+    lastRotation4 = lastRotation4 + rotationSpeed4 * deltaTime;
+    ctx.translate(centerX, centerY);
+    ctx.rotate(lastRotation4);
+    ctx.translate(-centerX, -centerY);
+    ctx.translate(currentTranslation3, currentTranslation3);
+    for(var i=0;i<360;i++){
+        var angle=i*Math.PI/180;
+        var pt=sineCircleXYatAngle(centerX,centerY,radius-50,currentAmp,angle,currentSineCount);
+        ctx.lineTo(pt.x,pt.y);
+    }
+    ctx.fill();
+    ctx.restore();
+
+    //ctx.closePath();
     //ctx.fill();
 
     //ctx.beginPath();
     for(var i=0;i<360;i++){
         var angle=i*Math.PI/180;
-        var pt=sineCircleXYatAngle(centerX,centerY,radius,currentAmp,angle,currentSineCount);
+        var pt=sineCircleXYatAngle(centerX,centerY,radius-50,currentAmp,angle,currentSineCount);
         ctx.lineTo(pt.x,pt.y);
     }
 
@@ -251,14 +340,22 @@ window.addEventListener('mousemove', function(event) {
     var mouseY = (event.clientY - canvas.offsetTop) * (canvas.height / canvas.offsetHeight);
     var currentDistance = Math.sqrt(Math.pow(centerX - mouseX, 2) + Math.pow(centerY - mouseY, 2));
     
-    if ((currentDistance < radius && lastDistance > radius) || (currentDistance > radius && lastDistance < radius)) {
+    if ((currentDistance < radius)) {
         var angle = Math.atan2(mouseY - centerY, mouseX - centerX) + Math.PI;
 
-        var amp = Math.sqrt(Math.pow(lastMouseX - mouseX, 2) + Math.pow(lastMouseY - mouseY, 2)) * mousePowerModifier;
-        if (amp > ampBoundary) {
-            ampBoundary = amp;
-            if (amp > ampMax) {
-                ampBoundary = ampMax;
+        //var amp = Math.sqrt(Math.pow(lastMouseX - mouseX, 2) + Math.pow(lastMouseY - mouseY, 2)) * mousePowerModifier;
+        //if (amp > ampBoundary) {
+        //    ampBoundary = amp;
+        //    if (amp > ampMax) {
+        //        ampBoundary = ampMax;
+        //    }
+        //}
+
+        var jellyJiggle = Math.sqrt(Math.pow(lastMouseX - mouseX, 2) + Math.pow(lastMouseY - mouseY, 2)) * 20;
+        if (jellyJiggle > currentJellyJiggle) {
+            currentJellyJiggle = jellyJiggle;
+            if (currentJellyJiggle > jellyJiggleMax) {
+                currentJellyJiggle = jellyJiggleMax;
             }
         }
 
