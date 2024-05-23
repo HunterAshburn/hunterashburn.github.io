@@ -15,7 +15,14 @@ $line-secondary-color:          #9290C3 !default;
 
 $attention-color:               #F97300 !default;
 
+$headshot-color:                #0026ff !default;
+
 $shadow-color:                  #0000003f !default;
+
+// For use in javascript
+:root {
+    --headshot-color: #{$headshot-color};
+}
 
 $spacing-unit:                  20px !default;
 
