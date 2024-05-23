@@ -5,11 +5,19 @@
 
   <body>
 
-    <main class="page-content" aria-label="Content">
+    {%- include header.html -%}
 
-        {{ content }}
+    <div class="default-container">
 
-    </main>
+      <main aria-label="Content">
+          {{ content }}
+      </main>
+
+      {%- include sidebar.html -%}
+
+    </div>
+
+    {%- include footer.html -%}
 
   </body>
 
