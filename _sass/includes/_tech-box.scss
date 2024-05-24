@@ -3,9 +3,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    height: 160px;
     width: fit-content;
     border-radius: 12px;
+    gap: $spacing-unit;
     padding: $spacing-unit;
     font-weight: bold;
     @include responsive-font-size(1em, $weak-font-size-multiplier-breakpoints);
@@ -13,10 +13,12 @@
 
 .tech-logo {
     height: 60px;
-    border-radius: 12px;
 }
 
 .javascript-box {
-    background-color: #2E302C;
-    color: #F7DF1E;
+    @include tech-box-colors(#111111, #F7DF1E);
+}
+
+.java-box {
+    @include tech-box-colors(#101420, #E76F00);
 }

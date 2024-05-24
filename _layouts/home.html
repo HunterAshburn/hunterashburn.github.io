@@ -10,11 +10,19 @@ layout: default
             {%- include in-touch-button.html -%}
         </div>
         {%- include jelly-headshot-image.html -%}
-        <p>This site is still under construction. Everything is subject to change.</p>
     </section>
 
-    <section class="toolbox">
-        {% include tech-box.html tech="javascript" %}
+    <section class="toolbox" style="display: flex; gap: 20px; margin: 20px; flex-wrap: wrap;">
+        <!-- temporary for testing (this includes the above inline styling) -->
+        {% for category_hash in site.data.tech_boxes %}
+            {% assign category = category_hash[0] %}
+            {% assign techs = category_hash[1] %}
+            {% for tech_hash in techs %}
+                {% assign tech = tech_hash[0] %}
+                {% include tech-box.html category=category tech=tech %}
+            {% endfor %}
+        {% endfor %}
+        <!-- temporary for testing -->
     </section>
 
     <section class="experience">
@@ -22,5 +30,5 @@ layout: default
     </section>
 
     <section class="showcase">
-        
+        <p>This site is still under construction. Everything is subject to change.</p>
     </section>

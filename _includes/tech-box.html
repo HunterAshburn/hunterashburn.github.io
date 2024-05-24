@@ -1,4 +1,4 @@
-{% assign box = site.data.tech_boxes[include.tech] %}
+{% assign box = site.data.tech_boxes[include.category][include.tech] %}
 <div class="tech-box {{ include.tech }}-box">
     <img class="tech-logo" src="{{ box.logo }}" alt="{{ include.tech }}">
     <span>{{ box.text }}</span>

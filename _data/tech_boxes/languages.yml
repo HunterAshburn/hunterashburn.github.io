@@ -1,0 +1,75 @@
+javascript:
+  logo: /assets/images/logos/JavaScript-01.svg
+  text: JavaScript
+
+java:
+  logo: /assets/images/logos/Java-05.svg
+  text: Java
+
+c#:
+  logo: /assets/images/logos/C-Sharp-01.svg
+  text: C#
+
+c++:
+  logo: /assets/images/logos/C++-01.svg
+  text: C++
+
+python:
+  logo: /assets/images/logos/Python-04.svg
+  text: Python
+
+vb.net:
+  logo: /assets/images/logos/VB.NET_Logo.svg
+  text: VB.NET
+
+ruby:
+  logo: /assets/images/logos/Ruby-01.svg
+  text: Ruby
+
+dart:
+  logo: /assets/images/logos/dart.svg
+  text: Dart
+
+sass:
+  logo: /assets/images/logos/Sass-01.svg
+  text: Sass
+
+css:
+  logo: /assets/images/logos/Css-3-02.svg
+  text: CSS
+
+html:
+  logo: /assets/images/logos/HTML-5-01.svg
+  text: HTML
+
+xml:
+  logo: /assets/images/logos/xml.svg
+  text: XML
+
+sql:
+  logo: /assets/images/logos/sql-database-generic.svg
+  text: SQL
+
+bash:
+  logo: /assets/images/logos/bash.svg
+  text: Bash
+
+c:
+  logo: /assets/images/logos/C-01.svg
+  text: C
+
+assembly:
+  logo: /assets/images/logos/assembly.svg
+  text: Assembly
+
+matlab:
+  logo: /assets/images/logos/matlab.svg
+  text: MATLAB
+
+r:
+  logo: /assets/images/logos/R_logo.svg
+  text: R
+
+ladderlogic:
+  logo: /assets/images/logos/LadderLogic.svg
+  text: Ladder Logic
