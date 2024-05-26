@@ -1,0 +1,19 @@
+bootstrap:
+  logo: /assets/images/logos/Bootstrap_logo.svg
+  text: Bootstrap
+
+flutter:
+  logo: /assets/images/logos/Flutter-icon-vector-02.svg
+  text: Flutter
+
+jekyll:
+  logo: /assets/images/logos/jekyll-test-tube.svg
+  text: Jekyll
+
+react:
+  logo: /assets/images/logos/React-logo-vector-01.svg
+  text: React
+
+rails:
+  logo: /assets/images/logos/Rails-logo-vector-01.svg
+  text: Ruby on Rails

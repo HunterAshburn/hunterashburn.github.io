@@ -1,0 +1,23 @@
+github:
+  logo: /assets/images/logos/Github-white.svg
+  text: GitHub
+
+blender:
+  logo: /assets/images/logos/Blender_logo_no_text.svg
+  text: Blender
+
+solidworks:
+  logo: /assets/images/logos/solidworks.svg
+  text: SolidWorks
+
+wireshark:
+  logo: /assets/images/logos/Wireshark_icon_new.svg
+  text: Wireshark
+
+photoshop:
+  logo: /assets/images/logos/photoshop.svg
+  text: Adobe Photoshop
+
+aftereffects:
+  logo: /assets/images/logos/after-effects.svg
+  text: Adobe After Effects

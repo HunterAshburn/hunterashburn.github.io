@@ -1,0 +1,27 @@
+visualstudio:
+  logo: /assets/images/logos/Visual-studio-02.svg
+  text:  Visual Studio
+
+visualcode:
+  logo: /assets/images/logos/Visual-studio-code-02.svg
+  text: Visual Studio Code
+
+eclipse:
+  logo: /assets/images/logos/Eclipse-02.svg
+  text: Eclipse
+
+rstudio:
+  logo: /assets/images/logos/rstudio-20-04.svg
+  text: RStudio
+
+matlab:
+  logo: /assets/images/logos/matlab.svg
+  text: MATLAB
+
+rslogix:
+  logo: /assets/images/logos/RSLogix.svg
+  text: RSLogix 500
+
+ssms:
+  logo: /assets/images/logos/ssms.svg
+  text: SSMS

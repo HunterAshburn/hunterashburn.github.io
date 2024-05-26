@@ -6,11 +6,11 @@ java:
   logo: /assets/images/logos/Java-05.svg
   text: Java
 
-c#:
+csharp:
   logo: /assets/images/logos/C-Sharp-01.svg
   text: C#
 
-c++:
+cplusplus:
   logo: /assets/images/logos/C++-01.svg
   text: C++
 
@@ -18,7 +18,7 @@ python:
   logo: /assets/images/logos/Python-04.svg
   text: Python
 
-vb.net:
+vbnet:
   logo: /assets/images/logos/VB.NET_Logo.svg
   text: VB.NET
 

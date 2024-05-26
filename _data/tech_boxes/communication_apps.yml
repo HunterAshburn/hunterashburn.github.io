@@ -1,0 +1,19 @@
+discord:
+  logo: /assets/images/logos/discord-mark.svg
+  text: Discord
+
+skype:
+  logo: /assets/images/logos/Skype-icon-vector-10.svg
+  text: Skype
+
+slack:
+  logo: /assets/images/logos/Slack-08.svg
+  text: Slack
+
+zoom:
+  logo: /assets/images/logos/Zoom-icon-500x281.svg
+  text: Zoom
+
+teams:
+  logo: /assets/images/logos/Microsoft-Teams-logo-vector-01.svg
+  text: Microsoft Teams

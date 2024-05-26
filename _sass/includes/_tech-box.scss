@@ -5,20 +5,271 @@
     justify-content: space-around;
     width: fit-content;
     border-radius: 12px;
-    gap: $spacing-unit;
-    padding: $spacing-unit;
+    //width: 100px;
+    //height: 140px;
+    gap: $spacing-unit / 2;
+    padding: $spacing-unit - 5px;
     font-weight: bold;
+    text-align: center;
     @include responsive-font-size(1em, $weak-font-size-multiplier-breakpoints);
+    @include responsive-div-size(155px, 115px, $div-size-multiplier-breakpoints);
 }
 
 .tech-logo {
-    height: 60px;
+    width: 100%;
+    @include responsive-image-max-width(60px, $image-max-height-multiplier-breakpoints);
+    @include responsive-image-max-height(60px, $image-max-height-multiplier-breakpoints);
+    height: auto;
 }
 
 .javascript-box {
-    @include tech-box-colors(#111111, #F7DF1E);
+    @include tech-box-colors(#181818, #F7DF1E);
 }
 
 .java-box {
-    @include tech-box-colors(#101420, #E76F00);
+    @include tech-box-colors(#12141D, #E76F00);
+}
+
+.csharp-box {
+    @include tech-box-colors(#2B1D2B, #FFFFFF);
+}
+
+.cplusplus-box {
+    @include tech-box-colors(#141E27, #FFFFFF);
+}
+
+.python-box {
+    @include tech-box-colors(#1C3B56, #E4E4E4);
+}
+
+.vbnet-box {
+    @include tech-box-colors(#11212D, #FFFFFF);
+}
+
+.ruby-box {
+    @include tech-box-colors(#EBEBE4, #C5332B);
+}
+
+.dart-box {
+    @include tech-box-colors(#1C2834, #FFFFFF);
+}
+
+.sass-box {
+    @include tech-box-colors(#C34B85, #FFFFFF);
+}
+
+.css-box {
+    @include tech-box-colors(#CDD8F1, #254BE4);
+}
+
+.html-box {
+    @include tech-box-colors(#F1D0C1, #A83215);
+}
+
+.xml-box {
+    @include tech-box-colors(#111111, #0081EB);
+}
+
+.sql-box {
+    @include tech-box-colors(#1A3129, #B8D432);
+}
+
+.bash-box {
+    @include tech-box-colors(#FFFFFF, #2A3238);
+}
+
+.c-box {
+    @include tech-box-colors(#191B1D, #FFFFFF);
+}
+
+.assembly-box {
+    @include tech-box-colors(#B9CDEC, #25344C);
+}
+
+.matlab-box {
+    @include tech-box-colors(#FDE6DF, #04374B);
+}
+
+.r-box {
+    @include tech-box-colors(#FFFFFF, #272727);
+}
+
+.ladderlogic-box {
+    @include tech-box-colors(#CDE0ED, #272727);
+}
+
+.rails-box {
+    @include tech-box-colors(#F0E7E9, #CC0000);
+}
+
+.firebase-box {
+    @include tech-box-colors(#1A73E8, #FFFFFF);
+}
+
+.nodejs-box {
+    @include tech-box-colors(#CCE5BE, #333333);
+}
+
+.kafka-box {
+    @include tech-box-colors(#539797, #080808);
+}
+
+.aws-box {
+    @include tech-box-colors(#252F3E, #FBFBFB);
+}
+
+.dynamodb-box {
+    @include tech-box-colors(#CBD7E2, #252F3E);
+}
+
+.mysql-box {
+    @include tech-box-colors(#004F61, #EDAA45);
+}
+
+.sqlite-box {
+    @include tech-box-colors(#FFFFFF, #044A5C);
+}
+
+.ssms-box {
+    @include tech-box-colors(#D6DBE9, #2C3D5B);
+}
+
+.discord-box {
+    @include tech-box-colors(#5865F2, #FFFFFF);
+}
+
+.skype-box {
+    @include tech-box-colors(#007FAD, #FFFFFF);
+}
+
+.slack-box {
+    @include tech-box-colors(#FFFFFF, #611F69);
+}
+
+.zoom-box {
+    @include tech-box-colors(#FFFFFF, #00031F);
+}
+
+.teams-box {
+    @include tech-box-colors(#262169, #FFFFFF);
+}
+
+.quartusprime-box {
+    @include tech-box-colors(#173446, #74C5EF);
+}
+
+.unity-box {
+    @include tech-box-colors(#FFFFFF, #000000);
+}
+
+.bootstrap-box {
+    @include tech-box-colors(#E7DAF7, #6528E0);
+}
+
+.flutter-box {
+    @include tech-box-colors(#041E3C, #47C5FB);
+}
+
+.jekyll-box {
+    @include tech-box-colors(#303030, #FFCC00);
+}
+
+.react-box {
+    @include tech-box-colors(#00D8FF, #23272F);
+}
+
+.visualstudio-box {
+    @include tech-box-colors(#E4E0FA, #3B2E57);
+}
+
+.visualcode-box {
+    @include tech-box-colors(#C4F9FD, #066ABC);
+}
+
+.eclipse-box {
+    @include tech-box-colors(#FFFFFF, #3A315C);
+}
+
+.rstudio-box {
+    @include tech-box-colors(#3d5063, #FFFFFF);
+}
+
+.rslogix-box {
+    @include tech-box-colors(#0F4D71, #DAC0C4);
+}
+
+.windows-box {
+    @include tech-box-colors(#001968, #FFFFFF);
+}
+
+.macos-box {
+    @include tech-box-colors(#EFEFEF, #1D1D1F);
+}
+
+.linux-box {
+    @include tech-box-colors(#F7C494, #000000);
+}
+
+.redhat-box {
+    @include tech-box-colors(#434343, #FFFFFF);
+}
+
+.ubuntu-box {
+    @include tech-box-colors(#262626, #FFFFFF);
+}
+
+.wsl-box {
+    @include tech-box-colors(#1C2538, #FFFFFF);
+}
+
+.virtualbox-box {
+    @include tech-box-colors(#4A535F, #DAE4F0);
+}
+
+.github-box {
+    @include tech-box-colors(#090909, #E6EDF3);
+}
+
+.blender-box {
+    @include tech-box-colors(#FFFFFF, #363636);
+}
+
+.solidworks-box {
+    @include tech-box-colors(#9FB2BD, #333333);
+}
+
+.wireshark-box {
+    @include tech-box-colors(#C7D7EE, #0053A5);
+}
+
+.photoshop-box {
+    @include tech-box-colors(#80E6FF, #2C2C2C);
+}
+
+.aftereffects-box {
+    @include tech-box-colors(#CB9EF7, #0F0028);
+}
+
+.junit-box {
+    @include tech-box-colors(#F5F5F5, #333333);
+}
+
+.monogame-box {
+    @include tech-box-colors(#202327, #FF4405);
+}
+
+.numpy-box {
+    @include tech-box-colors(#2A7C9D, #FFFFFF);
+}
+
+.googleworkspace-box {
+    @include tech-box-colors(#F7F7F7, #202124);
+}
+
+.microsoft365-box {
+    @include tech-box-colors(#E3E9FC, #0860C7);
+}
+
+.trello-box {
+    @include tech-box-colors(#F7F7F7, #253858);
 }

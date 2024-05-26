@@ -1,0 +1,27 @@
+windows:
+  logo: /assets/images/logos/Microsoft-windows-icon-vector-01.svg
+  text: Windows
+
+macos:
+  logo: /assets/images/logos/MacOS_logo.svg
+  text: macOS
+
+linux:
+  logo: /assets/images/logos/Tux.svg
+  text: Linux
+
+redhat:
+  logo: /assets/images/logos/Red_Hat.svg
+  text: Red Hat
+
+ubuntu:
+  logo: /assets/images/logos/ubuntu.svg
+  text: Ubuntu
+
+wsl:
+  logo: /assets/images/logos/Windows_Subsystem_for_Linux_logo.svg
+  text: WSL
+
+virtualbox:
+  logo: /assets/images/logos/virtualbox-icon.svg
+  text: VirtualBox

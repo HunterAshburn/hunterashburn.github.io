@@ -27,3 +27,13 @@ $image-max-height-multiplier-breakpoints: (
     1400px: 1.3,
     1600px: 1.5
 );
+
+$div-size-multiplier-breakpoints: (
+    0px:    0.925,
+    600px:  0.95,
+    800px:  0.975,
+    1000px: 1,
+    1200px: 1.1,
+    1400px: 1.2,
+    1600px: 1.3
+)
