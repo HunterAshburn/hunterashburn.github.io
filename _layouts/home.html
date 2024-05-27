@@ -12,17 +12,13 @@ layout: default
         {%- include jelly-headshot-image.html -%}
     </section>
 
-    <section class="toolbox" style="display: flex; gap: 20px; margin: 20px; flex-wrap: wrap;">
-        <!-- temporary for testing (this includes the above inline styling) -->
-        {% for category_hash in site.data.tech_boxes %}
-            {% assign category = category_hash[0] %}
-            {% assign techs = category_hash[1] %}
-            {% for tech_hash in techs %}
-                {% assign tech = tech_hash[0] %}
-                {% include tech-box.html category=category tech=tech %}
-            {% endfor %}
-        {% endfor %}
-        <!-- temporary for testing -->
+    <section class="toolbox">
+        {%- include conveyor-right.html title=page.toolbox.conveyor1.title  categories=page.toolbox.conveyor1.categories -%}
+        {%- include conveyor-left.html title=page.toolbox.conveyor2.title  categories=page.toolbox.conveyor2.categories -%}
+        {%- include conveyor-right.html title=page.toolbox.conveyor3.title  categories=page.toolbox.conveyor3.categories -%}
+        {%- include conveyor-left.html title=page.toolbox.conveyor4.title  categories=page.toolbox.conveyor4.categories -%}
+        <hr>
+        <script src="/assets/js/move-conveyor-belts.js"></script>
     </section>
 
     <section class="experience">

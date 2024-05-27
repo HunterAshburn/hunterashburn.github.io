@@ -1,0 +1,7 @@
+{% for category in include.categories %}
+    {% assign techs = site.data.tech_boxes[category] %}
+    {% for tech_hash in techs %}
+        {% assign tech = tech_hash[0] %}
+        {% include tech-box.html category=category tech=tech %}
+    {% endfor %}
+{% endfor %}

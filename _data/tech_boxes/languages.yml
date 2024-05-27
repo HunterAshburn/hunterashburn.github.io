@@ -1,7 +1,3 @@
-javascript:
-  logo: /assets/images/logos/JavaScript-01.svg
-  text: JavaScript
-
 java:
   logo: /assets/images/logos/Java-05.svg
   text: Java
@@ -29,6 +25,10 @@ ruby:
 dart:
   logo: /assets/images/logos/dart.svg
   text: Dart
+
+javascript:
+  logo: /assets/images/logos/JavaScript-01.svg
+  text: JavaScript
 
 sass:
   logo: /assets/images/logos/Sass-01.svg

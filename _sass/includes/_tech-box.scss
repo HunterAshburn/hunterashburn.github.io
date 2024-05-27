@@ -5,20 +5,18 @@
     justify-content: space-around;
     width: fit-content;
     border-radius: 12px;
-    //width: 100px;
-    //height: 140px;
     gap: $spacing-unit / 2;
     padding: $spacing-unit - 5px;
     font-weight: bold;
     text-align: center;
-    @include responsive-font-size(1em, $weak-font-size-multiplier-breakpoints);
+    @include responsive-font-size(1em, $font-size-multiplier-breakpoints);
     @include responsive-div-size(155px, 115px, $div-size-multiplier-breakpoints);
 }
 
 .tech-logo {
     width: 100%;
-    @include responsive-image-max-width(60px, $image-max-height-multiplier-breakpoints);
-    @include responsive-image-max-height(60px, $image-max-height-multiplier-breakpoints);
+    @include responsive-image-max-width(60px, $image-size-multiplier-breakpoints);
+    @include responsive-image-max-height(60px, $image-size-multiplier-breakpoints);
     height: auto;
 }
 

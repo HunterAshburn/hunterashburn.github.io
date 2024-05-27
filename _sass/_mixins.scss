@@ -37,3 +37,11 @@
         }
     }
 }
+
+@mixin responsive-height($base-height, $breakpoints) {
+    @each $breakpoint, $multiplier in $breakpoints {
+        @media screen and (min-width: $breakpoint) {
+            height: $base-height * $multiplier;
+        }
+    }
+}
