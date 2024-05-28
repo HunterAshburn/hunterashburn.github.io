@@ -28,7 +28,7 @@
 .conveyor-belt {
     position: absolute;
     display: flex;
-    gap: 20px;
+    gap: $spacing-unit;
 }
 
 .conveyor-belt-right {
@@ -37,4 +37,46 @@
 
 .conveyor-belt-left {
     right: 0px;
+}
+
+.conveyor-fade-left {
+    position: absolute;
+    top: 0;
+    @include responsive-right(10px, $gradient-right-and-left-multiplier-breakpoints);
+    background: linear-gradient(
+        to left,
+        rgba($background-primary-color, 0) 87%,
+        rgba($background-primary-color, 1) 97%
+    );
+    width: 100%;
+    height: 100%;
+}
+
+.conveyor-fade-right {
+    position: absolute;
+    top: 0;
+    @include responsive-left(10px, $gradient-right-and-left-multiplier-breakpoints);
+    background: linear-gradient(
+        to right,
+        rgba($background-primary-color, 0) 87%,
+        rgba($background-primary-color, 1) 97%
+    );
+    width: 100%;
+    height: 100%;
+}
+
+.conveyor-cover-left {
+    position: absolute;
+    left: calc(-100vw + 100%);
+    background-color: $background-primary-color;
+    width: calc(100vw - 100%);
+    height: 100%;
+}
+
+.conveyor-cover-right {
+    position: absolute;
+    right: calc(-100vw + 100%);
+    background-color: $background-primary-color;
+    width: calc(100vw - 100%);
+    height: 100%;
 }

@@ -45,3 +45,19 @@
         }
     }
 }
+
+@mixin responsive-right($base-right, $breakpoints) {
+    @each $breakpoint, $multiplier in $breakpoints {
+        @media screen and (min-width: $breakpoint) {
+            right: $base-right * $multiplier;
+        }
+    }
+}
+
+@mixin responsive-left($base-left, $breakpoints) {
+    @each $breakpoint, $multiplier in $breakpoints {
+        @media screen and (min-width: $breakpoint) {
+            left: $base-left * $multiplier;
+        }
+    }
+}
