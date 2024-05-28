@@ -1,0 +1,29 @@
+.undertaking-box {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-unit / 4;
+}
+
+.undertaking-box-left {
+    align-self: flex-start;
+    align-items: flex-start;
+    text-align: left;
+}
+
+.undertaking-box-right {
+    align-self: flex-end;
+    align-items: flex-end;
+    text-align: right;
+}
+
+.undertaking-description {
+    @include responsive-max-width(750px, $div-size-multiplier-breakpoints);
+    margin-top: $spacing-unit / 4;
+    padding: $spacing-unit / 2;
+    border: 2px solid $line-secondary-color;
+    border-radius: 12px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-unit / 4;
+}

@@ -51,6 +51,11 @@ h3 {
     @include responsive-font-size(1.5em, $font-size-multiplier-breakpoints);
 }
 
+h4 {
+    @include responsive-font-size(1em, $font-size-multiplier-breakpoints);
+    line-height: 1.5;
+}
+
 p {
     color: $text-secondary-color;
     line-height: 1.5;

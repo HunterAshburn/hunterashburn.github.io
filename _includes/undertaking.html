@@ -1,0 +1,7 @@
+<h3>{{ include.undertaking.heading }}</h3>
+<h4>{{ include.undertaking.sub-heading }}</h4>
+<div class="undertaking-description">
+    {% for description in include.undertaking.descriptions %}
+        <p>{{ description }}</p>
+    {% endfor %}
+</div>

@@ -16,3 +16,9 @@
 .intro-heading-3 {
     margin-bottom: $spacing-unit * 2;
 }
+
+.experience {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-unit * 3;
+}

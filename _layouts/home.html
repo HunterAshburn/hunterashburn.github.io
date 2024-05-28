@@ -11,7 +11,7 @@ layout: default
         </div>
         {%- include jelly-headshot-image.html -%}
     </section>
-
+    <p>This site is still under construction. Everything is subject to change.</p>
     <section class="toolbox">
         {%- include conveyor-right.html title=page.toolbox.conveyor1.title  categories=page.toolbox.conveyor1.categories -%}
         {%- include conveyor-left.html title=page.toolbox.conveyor2.title  categories=page.toolbox.conveyor2.categories -%}
@@ -22,9 +22,12 @@ layout: default
     </section>
 
     <section class="experience">
-        
+        {%- include undertaking-left.html undertaking=page.experience.undertaking1 -%}
+        {%- include undertaking-right.html undertaking=page.experience.undertaking2 -%}
+        {%- include undertaking-left.html undertaking=page.experience.undertaking3 -%}
+        {%- include undertaking-right.html undertaking=page.experience.undertaking4 -%}
     </section>
-
+    <hr>
     <section class="showcase">
-        <p>This site is still under construction. Everything is subject to change.</p>
+        
     </section>
