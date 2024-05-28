@@ -1,0 +1,11 @@
+junit:
+  logo: /assets/images/logos/junit5-logo.svg
+  text: JUnit
+
+monogame:
+  logo: /assets/images/logos/monogame.svg
+  text: MonoGame
+
+numpy:
+  logo: /assets/images/logos/NumPy-logo-vector-01.svg
+  text: NumPy

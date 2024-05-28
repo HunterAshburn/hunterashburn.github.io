@@ -1,0 +1,35 @@
+rails:
+  logo: /assets/images/logos/Rails-logo-vector-01.svg
+  text: Ruby on Rails
+
+firebase:
+  logo: /assets/images/logos/firebase.svg
+  text: Firebase
+
+nodejs:
+  logo: /assets/images/logos/nodejs.svg
+  text: Node.js
+
+kafka:
+  logo: /assets/images/logos/Kafka-01.svg
+  text: Apache Kafka
+
+aws:
+  logo: /assets/images/logos/Amazon_Web_Services_Logo.svg
+  text: AWS
+
+dynamodb:
+  logo: /assets/images/logos/AWS-DynamoDB-01.svg
+  text: DynamoDB
+
+mysql:
+  logo: /assets/images/logos/Mysql-icon-vector-02.svg
+  text: MySQL
+
+sqlite:
+  logo: /assets/images/logos/sqlite-1.svg
+  text: SQLite
+
+ssms:
+  logo: /assets/images/logos/ssms.svg
+  text: SSMS

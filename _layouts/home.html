@@ -10,11 +10,15 @@ layout: default
             {%- include in-touch-button.html -%}
         </div>
         {%- include jelly-headshot-image.html -%}
-        <p>This site is still under construction. Everything is subject to change.</p>
     </section>
 
     <section class="toolbox">
-        
+        {%- include conveyor-right.html title=page.toolbox.conveyor1.title  categories=page.toolbox.conveyor1.categories -%}
+        {%- include conveyor-left.html title=page.toolbox.conveyor2.title  categories=page.toolbox.conveyor2.categories -%}
+        {%- include conveyor-right.html title=page.toolbox.conveyor3.title  categories=page.toolbox.conveyor3.categories -%}
+        {%- include conveyor-left.html title=page.toolbox.conveyor4.title  categories=page.toolbox.conveyor4.categories -%}
+        <hr>
+        <script src="/assets/js/move-conveyor-belts.js"></script>
     </section>
 
     <section class="experience">
@@ -22,5 +26,5 @@ layout: default
     </section>
 
     <section class="showcase">
-        
+        <p>This site is still under construction. Everything is subject to change.</p>
     </section>
