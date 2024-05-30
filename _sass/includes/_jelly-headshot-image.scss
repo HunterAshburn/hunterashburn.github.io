@@ -1,3 +1,3 @@
 .jelly-headshot-image {
-    @include responsive-image-max-height(400px, $image-size-multiplier-breakpoints);
+    @include responsive-max-height(400px, $image-size-multiplier-breakpoints);
 }

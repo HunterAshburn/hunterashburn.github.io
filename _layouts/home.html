@@ -4,14 +4,14 @@ layout: default
 
     <section class="hunter">
         <div class="introduction">
-            <h1>{{ page.introduction.heading1 }}</h1>
+            <h1 class="intro-heading-1">{{ page.introduction.heading1 }}</h1>
             <h2 class="intro-heading-2">{{ page.introduction.heading2 }}</h2>
             <h3 class="intro-heading-3">{{ page.introduction.heading3 }}</h3>
             {%- include in-touch-button.html -%}
         </div>
         {%- include jelly-headshot-image.html -%}
     </section>
-
+    <p>This site is still under construction. Everything is subject to change.</p>
     <section class="toolbox">
         {%- include conveyor-right.html title=page.toolbox.conveyor1.title  categories=page.toolbox.conveyor1.categories -%}
         {%- include conveyor-left.html title=page.toolbox.conveyor2.title  categories=page.toolbox.conveyor2.categories -%}
@@ -22,9 +22,12 @@ layout: default
     </section>
 
     <section class="experience">
-        
+        {%- include undertaking-left.html undertaking=page.experience.undertaking1 -%}
+        {%- include undertaking-right.html undertaking=page.experience.undertaking2 -%}
+        {%- include undertaking-left.html undertaking=page.experience.undertaking3 -%}
+        {%- include undertaking-right.html undertaking=page.experience.undertaking4 -%}
     </section>
-
+    <hr>
     <section class="showcase">
-        <p>This site is still under construction. Everything is subject to change.</p>
+        <h2 class="showcase-heading">{{ page.showcase.heading }}</h2>
     </section>

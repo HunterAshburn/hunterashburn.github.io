@@ -15,8 +15,8 @@
 
 .tech-logo {
     width: 100%;
-    @include responsive-image-max-width(60px, $image-size-multiplier-breakpoints);
-    @include responsive-image-max-height(60px, $image-size-multiplier-breakpoints);
+    @include responsive-max-width(60px, $image-size-multiplier-breakpoints);
+    @include responsive-max-height(60px, $image-size-multiplier-breakpoints);
     height: auto;
 }
 

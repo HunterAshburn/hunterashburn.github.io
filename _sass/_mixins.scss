@@ -6,18 +6,18 @@
     }
 }
 
-@mixin responsive-image-max-width($base-image-size, $breakpoints) {
+@mixin responsive-max-width($base-width, $breakpoints) {
     @each $breakpoint, $multiplier in $breakpoints {
         @media screen and (min-width: $breakpoint) {
-            max-width: $base-image-size * $multiplier;
+            max-width: $base-width * $multiplier;
         }
     }
 }
 
-@mixin responsive-image-max-height($base-image-size, $breakpoints) {
+@mixin responsive-max-height($base-height, $breakpoints) {
     @each $breakpoint, $multiplier in $breakpoints {
         @media screen and (min-width: $breakpoint) {
-            max-height: $base-image-size * $multiplier;
+            max-height: $base-height * $multiplier;
         }
     }
 }
@@ -42,6 +42,14 @@
     @each $breakpoint, $multiplier in $breakpoints {
         @media screen and (min-width: $breakpoint) {
             height: $base-height * $multiplier;
+        }
+    }
+}
+
+@mixin responsive-width($base-width, $breakpoints) {
+    @each $breakpoint, $multiplier in $breakpoints {
+        @media screen and (min-width: $breakpoint) {
+            width: $base-width * $multiplier;
         }
     }
 }

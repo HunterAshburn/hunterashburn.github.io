@@ -3,10 +3,25 @@
     grid-template-columns: auto auto;
     gap: $spacing-unit * 2;
     align-items: center;
+    background: 
+        linear-gradient(
+            to right, 
+            rgba($background-color, 0) 90%, 
+            rgba($background-color, 1) 100%
+        ),
+        radial-gradient(
+            farthest-side at 70%, 
+            rgba($primary-color, 0.5) 0%, 
+            rgba($primary-color, 0) 100%
+    );
 }
 
 .introduction {
     margin-left: $spacing-unit * 2;
+}
+
+.intro-heading-1 {
+    color: $attention-color;
 }
 
 .intro-heading-2 {
@@ -15,4 +30,21 @@
 
 .intro-heading-3 {
     margin-bottom: $spacing-unit * 2;
+}
+
+.experience {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-unit * 3;
+}
+
+.showcase {
+    display: flex;
+    flex-direction: column;
+}
+
+.showcase-heading {
+    text-align: center;
+    margin-bottom: $spacing-unit * 2;
+    padding: 0px 50px;
 }
