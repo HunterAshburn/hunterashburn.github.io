@@ -1,7 +1,7 @@
-<h3>{{ include.undertaking.heading }}</h3>
-<h4>{{ include.undertaking.sub-heading }}</h4>
-<div class="undertaking-description">
+<h3 class="undertaking-heading">{{ include.undertaking.heading }}</h3>
+<h4 class="undertaking-sub-heading">{{ include.undertaking.sub-heading }}</h4>
+<div class="undertaking-description undertaking-desc-{{ include.side }}">
     {% for description in include.undertaking.descriptions %}
-        <p>{{ description }}</p>
+        <p class="undertaking-description-text">{{ description }}</p>
     {% endfor %}
 </div>

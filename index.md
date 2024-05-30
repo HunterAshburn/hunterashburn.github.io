@@ -2,7 +2,7 @@
 layout: home
 
 introduction:
-    heading1: <span class="attention-text">Hello! I am Hunter.</span>
+    heading1: Hello! I am Hunter.
     heading2: Developer and Software Engineer
     heading3: |
         Well rounded.
@@ -54,7 +54,7 @@ experience:
         sub-heading: June 2021 - August 2022
         descriptions: 
             - |
-                During my summers here, I was able to get hands-on expereince with the computers, systems, 
+                During my summers here, I was able to get hands-on experience with the computers, systems, 
                 and technology that drive the industrial automation at this company.
             - |
                 I was able to experience PLC programming, the installation of PLC modules and electrical 
@@ -72,4 +72,7 @@ experience:
             - |
                 This was a fantastic experience for me from the inception, to the development, to the launch 
                 for both iOS and Android devices.
+
+showcase:
+    heading: Showcase of Featured Projects
 ---

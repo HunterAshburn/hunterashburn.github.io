@@ -1,20 +1,19 @@
 .conveyor {
     position: relative;
     padding: $spacing-unit 0px;
-    border-top: 1px solid $line-primary-color;
+    border-top: 1px solid $card-color;
     @include responsive-height(155px, $div-size-multiplier-breakpoints);
     box-sizing: content-box;
 }
 
 .conveyor-title {
     position: absolute;
-    top: 5px;
-    @include responsive-height(35px, $div-size-multiplier-breakpoints);
-    background-color: rgba($background-primary-color, 0.95);
-    backdrop-filter: blur(5px);
-    box-shadow: 0px 8px 8px 9px rgba($background-primary-color, 0.95);
+    top: 0;
+    @include responsive-height(55px, $div-size-multiplier-breakpoints);
+    background-color: rgba($card-color, 1);
     border-radius: 12px;
-    padding: 0px 10px;
+    padding: 5px 10px;
+    color: $primary-color;
 }
 
 .conveyor-right-title {
@@ -45,8 +44,8 @@
     @include responsive-right(10px, $gradient-right-and-left-multiplier-breakpoints);
     background: linear-gradient(
         to left,
-        rgba($background-primary-color, 0) 87%,
-        rgba($background-primary-color, 1) 97%
+        rgba($background-color, 0) 87%,
+        rgba($background-color, 1) 97%
     );
     width: 100%;
     height: 100%;
@@ -58,8 +57,8 @@
     @include responsive-left(10px, $gradient-right-and-left-multiplier-breakpoints);
     background: linear-gradient(
         to right,
-        rgba($background-primary-color, 0) 87%,
-        rgba($background-primary-color, 1) 97%
+        rgba($background-color, 0) 87%,
+        rgba($background-color, 1) 97%
     );
     width: 100%;
     height: 100%;
@@ -68,7 +67,7 @@
 .conveyor-cover-left {
     position: absolute;
     left: calc(-100vw + 100%);
-    background-color: $background-primary-color;
+    background-color: $background-color;
     width: calc(100vw - 100%);
     height: 100%;
 }
@@ -76,7 +75,67 @@
 .conveyor-cover-right {
     position: absolute;
     right: calc(-100vw + 100%);
-    background-color: $background-primary-color;
+    background-color: $background-color;
     width: calc(100vw - 100%);
+    height: 100%;
+}
+
+.conveyor-backlight-left {
+    position: absolute;
+    top: 0;
+    @include responsive-left(10px, $gradient-right-and-left-multiplier-breakpoints);
+    // background: 
+    //     radial-gradient(
+    //         closest-corner at 50% 20%,
+    //         rgba($background-color, 1) 0%,
+    //         rgba($background-color, 0) 100%
+    //     ), 
+    //     radial-gradient(
+    //         closest-corner at 50% 80%,
+    //         rgba($background-color, 1) 0%,
+    //         rgba($background-color, 0) 100%
+    //     ), 
+    //     linear-gradient(
+    //         to left,
+    //         rgba($background-color, 1) 20%,
+    //         rgba($background-color, 0) 40%
+    //     ),
+    //     radial-gradient(
+    //         closest-side,
+    //         rgba($primary-color, 0.5) 0%,
+    //         rgba($primary-color, 0) 100%
+    // )
+    // ;
+    width: 100%;
+    height: 100%;
+}
+
+.conveyor-backlight-right {
+    position: absolute;
+    top: 0;
+    @include responsive-right(10px, $gradient-right-and-left-multiplier-breakpoints);
+    // background: 
+    //     radial-gradient(
+    //         closest-corner at 50% 20%,
+    //         rgba($background-color, 1) 0%,
+    //         rgba($background-color, 0) 100%
+    //     ), 
+    //     radial-gradient(
+    //         closest-corner at 50% 80%,
+    //         rgba($background-color, 1) 0%,
+    //         rgba($background-color, 0) 100%
+    //     ), 
+    //     linear-gradient(
+    //         to right,
+    //         rgba($background-color, 1) 20%,
+    //         rgba($background-color, 0) 40%
+    //     ),
+    //     radial-gradient(
+    //         closest-side,
+    //         rgba($primary-color, 0.5) 0%,
+    //         rgba($primary-color, 0) 100%
+    // )
+    // ;
+    width: 100%;
     height: 100%;
 }

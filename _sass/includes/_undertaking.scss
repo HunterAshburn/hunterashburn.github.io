@@ -16,14 +16,45 @@
     text-align: right;
 }
 
+.undertaking-heading {
+    color: $attention-color;
+}
+
+.undertaking-sub-heading {
+    color: $grey-text-color;
+}
+
 .undertaking-description {
     @include responsive-max-width(750px, $div-size-multiplier-breakpoints);
-    margin-top: $spacing-unit / 4;
+    margin-top: $spacing-unit;
     padding: $spacing-unit / 2;
-    border: 2px solid $line-secondary-color;
+    border: 1px solid lighten($card-color, 10%);
+    box-shadow: inset 0 1px lighten($card-color, 10%);
     border-radius: 12px;
     text-align: left;
     display: flex;
     flex-direction: column;
     gap: $spacing-unit / 4;
+    background-color: $card-color;
+}
+
+.undertaking-description-text {
+    color: $grey-text-color;
+    //font-weight: bold;
+}
+
+.undertaking-desc-right {
+    // background: linear-gradient(
+    //     to bottom left, 
+    //     rgba(#b5f5e3, 1) 20%,
+    //     rgba(#21e6c1, 1) 100%,
+    // );
+}
+
+.undertaking-desc-left {
+    // background: linear-gradient(
+    //     to bottom right, 
+    //     rgba(#b5f5e3, 1) 20%,
+    //     rgba(#21e6c1, 1) 100%,
+    // );
 }
