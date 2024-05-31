@@ -1,0 +1,35 @@
+.footer-main {
+    padding-top: $spacing-unit * 2;
+    padding: $spacing-unit * 2 $spacing-unit 0px $spacing-unit;
+    max-width: 1600px;
+    width: 90%;
+    align-self: center;
+}
+
+.footer-title {
+    @include responsive-font-size(1.2em, $font-size-multiplier-breakpoints);
+    color: $primary-color;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: $spacing-unit;
+    margin-top: $spacing-unit;
+    margin-bottom: $spacing-unit * 2;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: $spacing-unit * 1.5;
+}
+
+.copyright {
+    text-align: center;
+    border-top: 3px solid $primary-color;
+    background-color: $primary-color;
+    color: $dark-text-color;
+    padding: $spacing-unit;
+}
