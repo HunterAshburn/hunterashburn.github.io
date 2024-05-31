@@ -1,0 +1,7 @@
+.contact-me-footer {
+    display: flex;
+    justify-content: center;
+    gap: $spacing-unit * 2;
+    border-top: 1px solid $card-color;
+    padding: $spacing-unit * 4;
+}

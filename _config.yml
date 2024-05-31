@@ -1,4 +1,21 @@
 title: Hunter Ashburn
+copyright: © 2024 Hunter Ashburn. All rights reserved.
+email: email@temporary.com
+github: https://github.com/HunterAshburn
+linkedin: https://www.linkedin.com/in/hunter-ashburn-b578821b5/
+resume: resume
+
+footer-text: |
+  Devloper and Software Engineer.
+  <br>
+  <br>Full-stack.
+  <br>Front end.
+  <br>Back end.
+  <br>Web development.
+  <br>Mobile development.
+  <br>Game development.
+  <br>Software development.
+  <br>Software architecture.
 
 include:
   - _pages

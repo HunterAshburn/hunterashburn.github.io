@@ -18,8 +18,17 @@ body {
     -webkit-font-smoothing: antialiased;
     -webkit-text-size-adjust: 100%;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     overflow-x: hidden;
+}
+
+footer {
+    width: 100%;
+    border-top: 1px solid $primary-color;
+    display: flex;
+    flex-direction: column;
+    background-color: $card-color;
 }
   
 img, picture, video, canvas, svg {
@@ -31,7 +40,7 @@ input, button, textarea, select {
     font: inherit;
 }
 
-p, h1, h2, h3, h4, h5, h6 {
+a, p, h1, h2, h3, h4, h5, h6 {
     overflow-wrap: break-word;
     color: $light-text-color;
 }
@@ -55,6 +64,10 @@ h4 {
 
 p {
     line-height: 1.5;
+    @include responsive-font-size(1em, $font-size-multiplier-breakpoints);
+}
+
+a {
     @include responsive-font-size(1em, $font-size-multiplier-breakpoints);
 }
 
