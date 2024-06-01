@@ -1,0 +1,12 @@
+.header-layout {
+    display: flex;
+    height: 120px;
+    width: 100%;
+    max-width: 1600px;
+    margin: 0px $spacing-unit;
+    background-color: $nav-menu-color;
+}
+
+.header-hunter {
+    display: flex;
+}

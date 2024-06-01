@@ -80,18 +80,18 @@
     height: 100%;
 }
 
-.conveyor-backlight-left {
-    position: absolute;
-    top: 0;
-    @include responsive-left(10px, $gradient-right-and-left-multiplier-breakpoints);
-    width: 100%;
-    height: 100%;
-}
+// .conveyor-backlight-left {
+//     position: absolute;
+//     top: 0;
+//     @include responsive-left(10px, $gradient-right-and-left-multiplier-breakpoints);
+//     width: 100%;
+//     height: 100%;
+// }
 
-.conveyor-backlight-right {
-    position: absolute;
-    top: 0;
-    @include responsive-right(10px, $gradient-right-and-left-multiplier-breakpoints);
-    width: 100%;
-    height: 100%;
-}
+// .conveyor-backlight-right {
+//     position: absolute;
+//     top: 0;
+//     @include responsive-right(10px, $gradient-right-and-left-multiplier-breakpoints);
+//     width: 100%;
+//     height: 100%;
+// }

@@ -7,8 +7,17 @@
     padding: 0;
 }
 
+header {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    z-index: 1;
+}
+
 main {
     margin: $spacing-unit;
+    margin-top: 120px + $spacing-unit;
     max-width: 1600px;
 }
 
