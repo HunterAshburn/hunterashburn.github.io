@@ -78,6 +78,7 @@ p {
 
 a {
     @include responsive-font-size(1em, $font-size-multiplier-breakpoints);
+    text-decoration: none;
 }
 
 section {

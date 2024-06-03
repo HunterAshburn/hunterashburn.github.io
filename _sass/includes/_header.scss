@@ -5,8 +5,46 @@
     max-width: 1600px;
     margin: 0px $spacing-unit;
     background-color: $nav-menu-color;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px $spacing-unit;
+    gap: $spacing-unit * 2;
 }
 
 .header-hunter {
     display: flex;
+    align-items: center;
+    gap: $spacing-unit;
+    @include responsive-font-size(1.1em, $font-size-multiplier-breakpoints);
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    gap: $spacing-unit * 2;
+    @include responsive-font-size(1.3em, $font-size-multiplier-breakpoints);
+    font-weight: bold;
+}
+
+.header-contact {
+    display: flex;
+    align-items: center;
+}
+
+.header-contact-icon {
+    @include responsive-height(40px, $image-size-multiplier-breakpoints);
+    margin-right: $spacing-unit / 2;
+    background-color: $light-text-color;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+.header-contact-me {
+    margin-left: $spacing-unit / 2;
+    @include responsive-font-size(1.3em, $font-size-multiplier-breakpoints);
+    font-weight: bold;
+    text-align: center;
+    border: 2px solid $light-text-color;
+    border-radius: 10px;
+    padding: 15px 10px;
 }
