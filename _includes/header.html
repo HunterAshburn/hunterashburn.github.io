@@ -1,19 +1,40 @@
-<!-- <header>
-    <div class="header-hunter">
-        {%- include circular-headshot-image.html -%}
-        <h2>{{ site.title }}</h2>
+<header>
+    <div class="header-layout">
+        <a href="/">
+            <div class="header-hunter">
+                {%- include circular-headshot-image.html -%}
+                <h3 class="header-hunter-title">{{ site.title }}</h3>
+            </div>
+        </a>
+    
+        <nav>
+            <ul class="nav-list">
+                <li>
+                    <a class="{% if page.url == '/' | relative_url %}active-page{% endif %}" href="/">Home</a>
+                </li>
+                <li>
+                    <a class="{% if page.url == '/projects/' | relative_url %}active-page{% endif %}" href="/projects">Projects</a>
+                </li>
+                <li>
+                    <a class="{% if page.url == '/skills' | relative_url %}active-page{% endif %}" href="/skills">Skills</a>
+                </li>
+                <li>
+                    <a class="{% if page.url == '/about' | relative_url %}active-page{% endif %}" href="/about">About</a>
+                </li>
+            </ul>
+        </nav>
+    
+        <div class="header-contact">
+            <a href="{{ site.github }}">
+                <img class="header-contact-icon" src="/assets/images/logos/Github-22.svg" alt="{{ site.title }} github">
+            </a>
+            <a href="{{ site.linkedin }}">
+                <img class="header-contact-icon" src="/assets/images/logos/Linkedin-dark.svg" alt="{{ site.title }} linkedin">
+            </a>
+            <a href="{{ site.resume }}">
+                <img class="header-contact-icon" src="/assets/images/logos/resume.svg" alt="{{ site.title }} resume">
+            </a>
+            <a class="header-contact-me {% if page.url == '/contact' | relative_url %}active-page{% endif %}" href="/contact">Contact Me</a>
+        </div>
     </div>
-
-    <nav>
-        <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-        </ul>
-    </nav>
-
-    <div class="header-contact">
-
-    </div>
-</header> -->
+</header>

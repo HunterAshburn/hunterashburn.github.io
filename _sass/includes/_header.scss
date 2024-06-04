@@ -1,0 +1,104 @@
+.header-layout {
+    display: flex;
+    height: 85px;
+    width: 100%;
+    max-width: 1600px;
+    margin: 0px $spacing-unit / 2;
+    background-image: linear-gradient(to bottom, rgba($nav-menu-color, 1), rgba($nav-menu-color, 0));
+    backdrop-filter: blur(5px);
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px $spacing-unit / 2;
+    gap: $spacing-unit * 1.5;
+}
+
+.header-hunter {
+    display: flex;
+    align-items: center;
+    gap: $spacing-unit;
+}
+
+.header-hunter-title {
+    transition: color 0.15s;
+}
+
+.header-hunter:hover .header-hunter-title {
+    color: $primary-color;
+}
+
+.header-hunter img {
+    transition: box-shadow 0.15s;
+}
+
+.header-hunter:hover img {
+    box-shadow: 0px 0px 9px 3px $primary-color;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    gap: $spacing-unit / 4;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.nav-list a {
+    padding: 10px 18px;
+    border-radius: 10px;
+    transition: background-color 0.15s, color 0.15s, box-shadow 0.15s;
+}
+
+.nav-list a:hover {
+    background-color: $card-color;
+    box-shadow: inset 0px 1px 3px 1px $shadow-color, 0px 1px 0px 0px lighten($nav-menu-color, 5%);
+    color: $primary-color;
+}
+
+.nav-list a.active-page {
+    background-color: $primary-color;
+    box-shadow: inset 0px 1px 0px 0px lighten($primary-color, 10%), 0px 4px 3px 2px $shadow-color;
+    color: $dark-text-color;
+}
+
+.header-contact {
+    display: flex;
+    align-items: center;
+    gap: $spacing-unit / 2;
+}
+
+.header-contact-icon {
+    height: 40px;
+    background-color: $light-text-color;
+    padding: 5px;
+    border-radius: 10px;
+    transition: background-color 0.15s, box-shadow 0.15s;
+}
+
+.header-contact-icon:hover {
+    background-color: $primary-color;
+}
+
+.header-contact-me {
+    margin-left: $spacing-unit;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-align: center;
+    border: 4px solid $light-text-color;
+    border-radius: 10px;
+    padding: 10px 10px;
+    background-color: $dark-text-color;
+    transition: background-color 0.15s, color 0.15s, border-color 0.15s;
+}
+
+.header-contact-me:hover {
+    border-color: $primary-color;
+    color: $primary-color;
+}
+
+.header-contact-me.active-page {
+    border: none;
+    background-color: $primary-color;
+    color: $dark-text-color;
+    padding: 14px 14px;
+    box-shadow: inset 0px 1px 0px 0px lighten($primary-color, 10%), 0px 4px 3px 2px $shadow-color;
+}

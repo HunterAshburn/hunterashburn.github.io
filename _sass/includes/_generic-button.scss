@@ -7,6 +7,7 @@
     outline-offset: 4px;
     transition: filter 250ms;
     align-self: center;
+    display: inline-block;
 }
 
 .generic-button-shadow {
@@ -35,10 +36,10 @@
     border-radius: 12px;
     background: linear-gradient(
         to left,
-        darken($primary-color, 25%),
-        darken($primary-color, 18%) 8%,
-        darken($primary-color, 18%) 92%,
-        darken($primary-color, 25%) 100%
+        darken($primary-color, 70%),
+        darken($primary-color, 58%) 8%,
+        darken($primary-color, 58%) 92%,
+        darken($primary-color, 70%) 100%
     );
 }
 
@@ -59,8 +60,8 @@
         cubic-bezier(.3, .7, .4, 1);
 }
 
-.generic-button-button:hover {
-    filter: brightness(110%);
+.generic-button:hover {
+    filter: brightness(120%);
 }
 
 .generic-button:hover .generic-button-front {

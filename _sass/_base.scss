@@ -7,8 +7,17 @@
     padding: 0;
 }
 
+header {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    z-index: 1;
+}
+
 main {
     margin: $spacing-unit;
+    margin-top: 85px + $spacing-unit;
     max-width: 1600px;
 }
 
@@ -69,6 +78,7 @@ p {
 
 a {
     @include responsive-font-size(1em, $font-size-multiplier-breakpoints);
+    text-decoration: none;
 }
 
 section {

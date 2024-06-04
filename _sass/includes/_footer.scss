@@ -18,12 +18,24 @@
     gap: $spacing-unit;
     margin-top: $spacing-unit;
     margin-bottom: $spacing-unit * 2;
+    align-items: start;
 }
 
 .footer-links {
-    display: flex;
-    flex-direction: column;
-    gap: $spacing-unit * 1.5;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-auto-rows: min-content;
+    column-gap: $spacing-unit / 3;
+    row-gap: $spacing-unit * 1.5;
+    align-items: center;
+}
+
+.footer-link-icon {
+    @include responsive-max-height(22px, $image-size-multiplier-breakpoints);
+}
+
+.footer-link-icon-wrapper {
+    justify-self: center;
 }
 
 .copyright {
