@@ -6,6 +6,7 @@
     cursor: pointer;
     outline-offset: 4px;
     transition: filter 250ms;
+    display: inline-block;
 }
 
 .in-touch-shadow {
@@ -34,10 +35,10 @@
     border-radius: 12px;
     background: linear-gradient(
         to left,
-        darken($attention-color, 25%),
-        darken($attention-color, 18%) 8%,
-        darken($attention-color, 18%) 92%,
-        darken($attention-color, 25%) 100%
+        darken($attention-color, 65%),
+        darken($attention-color, 53%) 8%,
+        darken($attention-color, 53%) 92%,
+        darken($attention-color, 65%) 100%
     );
 }
 
@@ -59,7 +60,7 @@
 }
 
 .in-touch-button:hover {
-    filter: brightness(110%);
+    filter: brightness(120%);
 }
 
 .in-touch-button:hover .in-touch-front {

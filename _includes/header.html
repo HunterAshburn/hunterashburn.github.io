@@ -3,23 +3,23 @@
         <a href="/">
             <div class="header-hunter">
                 {%- include circular-headshot-image.html -%}
-                <h3>{{ site.title }}</h3>
+                <h3 class="header-hunter-title">{{ site.title }}</h3>
             </div>
         </a>
     
         <nav>
             <ul class="nav-list">
                 <li>
-                    <a href="/">Home</a>
+                    <a class="{% if page.url == '/' | relative_url %}active-page{% endif %}" href="/">Home</a>
                 </li>
                 <li>
-                    <a href="/projects">Projects</a>
+                    <a class="{% if page.url == '/projects/' | relative_url %}active-page{% endif %}" href="/projects">Projects</a>
                 </li>
                 <li>
-                    <a href="/skills">Skills</a>
+                    <a class="{% if page.url == '/skills' | relative_url %}active-page{% endif %}" href="/skills">Skills</a>
                 </li>
                 <li>
-                    <a href="/about">About</a>
+                    <a class="{% if page.url == '/about' | relative_url %}active-page{% endif %}" href="/about">About</a>
                 </li>
             </ul>
         </nav>
@@ -34,7 +34,7 @@
             <a href="{{ site.resume }}">
                 <img class="header-contact-icon" src="/assets/images/logos/resume.svg" alt="{{ site.title }} resume">
             </a>
-            <a class="header-contact-me" href="/contact">Contact Me</a>
+            <a class="header-contact-me {% if page.url == '/contact' | relative_url %}active-page{% endif %}" href="/contact">Contact Me</a>
         </div>
     </div>
 </header>
