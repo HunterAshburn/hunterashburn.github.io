@@ -2,7 +2,11 @@
 layout: default
 ---
 
-{%- include glitch-text.html text="404" element="h1" -%}
-{%- include glitch-text.html text="Page not found" element="h2" -%}
-<h3>Sorry :(</h3>
-{%- include generic-button.html text="Back to homepage" link="/" -%}
+<section class="section-404">
+    <div class="glitch-area-404">
+        {%- include glitch-text.html text=page.glitch-message-1 element="h1" -%}
+        {%- include glitch-text.html text=page.glitch-message-2 element="h2" -%}
+    </div>
+    <h3>{{ page.normal-message }}</h3>
+    {%- include generic-button.html text=page.button.text link=page.button.link -%}
+</section>

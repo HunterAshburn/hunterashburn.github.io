@@ -1,0 +1,13 @@
+.section-404 {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: $spacing-unit * 3;
+}
+
+.glitch-area-404 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
