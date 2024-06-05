@@ -75,4 +75,7 @@ experience:
 
 showcase:
     heading: Showcase of Featured Projects
+    button:
+        text: See all of my projects
+        link: /projects/
 ---

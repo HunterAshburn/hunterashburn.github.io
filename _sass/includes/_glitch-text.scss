@@ -1,0 +1,68 @@
+$glitch-color-one:      #00fffc;
+$glitch-color-two:      #fc00ff;
+$glitch-color-three:    #fffc00;
+
+.glitch-text {
+    position: relative;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 0.05em 0 0 $glitch-color-one, -0.03em -0.04em 0 $glitch-color-two, 0.025em 0.04em 0 $glitch-color-three;
+    animation: glitch 725ms infinite;
+}
+  
+.glitch-text span {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.glitch-text-container {
+    display: flex;
+}
+  
+.glitch-text span:first-child {
+    animation: glitch 500ms infinite;
+    clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%);
+    transform: translate(-0.04em, -0.03em);
+    opacity: 0.75;
+}
+  
+.glitch-text span:last-child {
+    animation: glitch 375ms infinite;
+    clip-path: polygon(0 65%, 100% 65%, 100% 100%, 0 100%);
+    transform: translate(0.04em, 0.03em);
+    opacity: 0.75;
+}
+
+.glitch-text-h1 {
+    @include responsive-font-size(8em, $font-size-multiplier-breakpoints);
+    letter-spacing: 8px;
+}
+
+.glitch-text-h2 {
+    @include responsive-font-size(3em, $font-size-multiplier-breakpoints);
+}
+  
+@keyframes glitch {
+    0% {
+        text-shadow: 0.05em 0 0 $glitch-color-one, -0.03em -0.04em 0 $glitch-color-two, 0.025em 0.04em 0 $glitch-color-three;
+    }
+    15% {
+        text-shadow: 0.05em 0 0 $glitch-color-one, -0.03em -0.04em 0 $glitch-color-two, 0.025em 0.04em 0 $glitch-color-three;
+    }
+    16% {
+        text-shadow: -0.05em -0.025em 0 $glitch-color-one, 0.025em 0.035em 0 $glitch-color-two, -0.05em -0.05em 0 $glitch-color-three;
+    }
+    49% {
+        text-shadow: -0.05em -0.025em 0 $glitch-color-one, 0.025em 0.035em 0 $glitch-color-two, -0.05em -0.05em 0 $glitch-color-three;
+    }
+    50% {
+        text-shadow: 0.05em 0.035em 0 $glitch-color-one, 0.03em 0 0 $glitch-color-two, 0 -0.04em 0 $glitch-color-three;
+    }
+    99% {
+        text-shadow: 0.05em 0.035em 0 $glitch-color-one, 0.03em 0 0 $glitch-color-two, 0 -0.04em 0 $glitch-color-three;
+    }
+    100% {
+        text-shadow: -0.05em 0 0 $glitch-color-one, -0.025em -0.04em 0 $glitch-color-two, -0.04em -0.025em 0 $glitch-color-three;
+    }
+}
