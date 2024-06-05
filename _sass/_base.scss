@@ -32,6 +32,10 @@ body {
     overflow-x: hidden;
 }
 
+html, body {
+    height: 100%;
+}
+
 footer {
     width: 100%;
     border-top: 1px solid $primary-color;
@@ -93,5 +97,9 @@ hr {
 
 .attention-text {
     color: $attention-color;
+}
+
+.default-container {
+    flex: 1;
 }
 
