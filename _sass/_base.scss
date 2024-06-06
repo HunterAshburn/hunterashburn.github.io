@@ -43,6 +43,15 @@ footer {
     flex-direction: column;
     background-color: $card-color;
 }
+
+aside {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    max-height: 100vh;
+    padding-top: 85px + $spacing-unit;
+    padding-bottom: $spacing-unit;
+}
   
 img, picture, video, canvas, svg {
     display: block;
@@ -100,6 +109,6 @@ hr {
 }
 
 .default-container {
+    display: flex;
     flex: 1;
 }
-
