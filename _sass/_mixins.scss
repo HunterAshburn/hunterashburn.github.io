@@ -69,3 +69,35 @@
         }
     }
 }
+
+@mixin responsive-margin-left($base-margin-left, $breakpoints) {
+    @each $breakpoint, $multiplier in $breakpoints {
+        @media screen and (min-width: $breakpoint) {
+            margin-left: $base-margin-left * $multiplier;
+        }
+    }
+}
+
+@mixin responsive-margin-right($base-margin-right, $breakpoints) {
+    @each $breakpoint, $multiplier in $breakpoints {
+        @media screen and (min-width: $breakpoint) {
+            margin-right: $base-margin-right * $multiplier;
+        }
+    }
+}
+
+@mixin responsive-margin-top($base-margin-top, $breakpoints) {
+    @each $breakpoint, $multiplier in $breakpoints {
+        @media screen and (min-width: $breakpoint) {
+            margin-top: $base-margin-top * $multiplier;
+        }
+    }
+}
+
+@mixin responsive-margin-bottom($base-margin-bottom, $breakpoints) {
+    @each $breakpoint, $multiplier in $breakpoints {
+        @media screen and (min-width: $breakpoint) {
+            margin-bottom: $base-margin-bottom * $multiplier;
+        }
+    }
+}

@@ -42,3 +42,13 @@ $gradient-right-and-left-multiplier-breakpoints: (
     1500px: 14,
     1600px: 14,
 );
+
+$main-margin-left-multiplier-breakpoints: (
+    0px:    0.2,
+    600px:  0.2,
+    800px:  0.25,
+    1000px: 0.5,
+    1200px: 1,
+    1400px: 1.2,
+    1600px: 1.3
+);

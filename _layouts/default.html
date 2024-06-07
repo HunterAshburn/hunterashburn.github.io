@@ -1,24 +1,31 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
 
-  {%- include head.html -%}
+  {% include head.html %}
 
   <body>
 
-    {%- include header.html -%}
+    <script src="/assets/js/define-root.js"></script>
+
+    {% include header.html %}
 
     <div class="default-container">
 
-      <main aria-label="Content">
+      <main class="{% unless layout.hide_sidebar %}with-sidebar{% endunless %}" aria-label="Content">
         {{ content }}
       </main>
 
-      {%- include sidebar.html -%}
+      {% unless layout.hide_sidebar %}
+        {% include sidebar.html %}
+      {% endunless %}
 
     </div>
 
-    {%- include contact-me-footer.html -%}
-    {%- include footer.html -%}
+    {% unless layout.hide_contact_me_footer %}
+      {% include contact-me-footer.html %}
+    {% endunless %}
+
+    {% include footer.html %}
 
   </body>
 

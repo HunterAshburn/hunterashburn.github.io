@@ -1,17 +1,23 @@
 .sidebar-container {
-    @include responsive-width(100px, $div-size-multiplier-breakpoints);
     margin-right: $spacing-unit / 2;
 }
 
-.sidebar-list {
+#sidebar-list {
     display: flex;
     flex-direction: column;
     align-items: center;
     list-style: none;
-    gap: $spacing-unit;
+    text-align: center;
+    @include responsive-width(100px, $div-size-multiplier-breakpoints);
 }
 
-.sidebar-list li {
+#sidebar-list li {
     @include responsive-font-size(1em, $font-size-multiplier-breakpoints);
+    padding: $spacing-unit * 1.5 0px;
+    width: 100%;
     color: $light-text-color;
+}
+
+#sidebar-list hr {
+    border-color: $light-text-color;
 }

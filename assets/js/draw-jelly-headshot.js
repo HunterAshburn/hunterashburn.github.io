@@ -1,8 +1,6 @@
 const canvas = document.getElementById('jelly-canvas');
 const ctx = canvas.getContext('2d');
 
-const root = document.documentElement;
-
 const headshotGradientColor = getComputedStyle(root).getPropertyValue('--headshot-color').trim();
 const headshotImg = new Image();
 headshotImg.src = '/assets/images/jellyHeadshot.png';

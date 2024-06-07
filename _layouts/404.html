@@ -1,12 +1,13 @@
 ---
 layout: default
+hide_sidebar: true
 ---
 
 <section class="section-404">
     <div class="glitch-area-404">
-        {%- include glitch-text.html text=page.glitch-message-1 element="h1" -%}
-        {%- include glitch-text.html text=page.glitch-message-2 element="h2" -%}
+        {% include glitch-text.html text=page.glitch-message-1 element="h1" %}
+        {% include glitch-text.html text=page.glitch-message-2 element="h2" %}
     </div>
     <h3>{{ page.normal-message }}</h3>
-    {%- include generic-button.html text=page.button.text link=page.button.link -%}
+    {% include generic-button.html text=page.button.text link=page.button.link %}
 </section>
