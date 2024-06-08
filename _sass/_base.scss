@@ -23,8 +23,8 @@ main {
 }
 
 main.with-sidebar {
-    @include responsive-margin-left(120px, $main-margin-left-multiplier-breakpoints);
-    @include responsive-margin-right($spacing-unit, $main-margin-left-multiplier-breakpoints);
+    @include responsive-margin-left(140px, $main-margin-left-multiplier-breakpoints);
+    @include responsive-margin-right($spacing-unit * 2, $main-margin-left-multiplier-breakpoints);
 }
 
 body {

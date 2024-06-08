@@ -6,8 +6,8 @@ const contentItems = document.querySelectorAll('.sidebar-content-item');
 const viewingColor = hexToRgb(getComputedStyle(root).getPropertyValue('--sidebar-viewing-color').trim());
 const notViewingColor = hexToRgb(getComputedStyle(root).getPropertyValue('--sidebar-not-viewing-color').trim());
 
-const lowerFontSize = 1;
-const upperFontSize = 1.2;
+const baselineFontSizeElement = document.getElementById('javascript-li-font-size-baseline');
+const fontSizeMultiplier = 1.2;
 
 function interpolateColor(color1, color2, percentage) {
     let result = color1.slice();
@@ -34,7 +34,10 @@ function rgbStringToRgb(rgbString) {
     return rgbString.match(/\d+/g).map(Number);
 }
 
-function interpolateFontSize(lowerSize, upperSize, percentage) {
+function interpolateFontSize(element, percentage) {
+    const lowerSize = parseFloat(window.getComputedStyle(baselineFontSizeElement).fontSize);
+    const upperSize = lowerSize * fontSizeMultiplier;
+
     return (lowerSize + (upperSize - lowerSize) * percentage);
 }
 
@@ -52,21 +55,20 @@ function elementVisibilityPercentage(element) {
         return 0;
     }
 
-    if (elementTop <= viewportTop && elementBottom >= viewportBottom) {
-        return 1;
-    }
-
     const visibleHeight = Math.min(elementBottom, viewportBottom) - Math.max(elementTop, viewportTop);
-    const percentageVisible = (visibleHeight / elementHeight);
 
-    return percentageVisible;
+    if (elementHeight > viewportHeight) {
+        return (visibleHeight  / viewportHeight);
+    } else {
+        return (visibleHeight / elementHeight);
+    }
 }
 
 function updateSidebar() {
     for (let i = 0; i < contentItems.length; i++) {
         visibilityPercentage = elementVisibilityPercentage(contentItems[i]);
         listItems[i].style.color = interpolateColor(notViewingColor, viewingColor, visibilityPercentage);
-        listItems[i].style.fontSize = interpolateFontSize(lowerFontSize, upperFontSize, visibilityPercentage) + 'em';
+        listItems[i].style.fontSize = interpolateFontSize(listItems[i], visibilityPercentage) + 'px';
 
         if (i > 0) {
             hrs[i - 1].style.borderColor = interpolateColor(rgbStringToRgb(listItems[i - 1].style.color), rgbStringToRgb(listItems[i].style.color), 0.5);
