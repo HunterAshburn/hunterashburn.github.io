@@ -23,6 +23,21 @@
     direction: rtl;
 }
 
+#sidebar-list li:first-child {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+#sidebar-list li:last-child {
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+#sidebar-list li:hover {
+    background-color: $attention-color;
+    font-weight: bold;
+}
+
 #sidebar-list hr {
     border-color: $light-text-color;
 }
