@@ -1,6 +1,11 @@
 ---
 layout: home
 
+sidebar:
+    - Hunter
+    - Toolbox
+    - Experience
+
 introduction:
     heading1: Hello! I am Hunter.
     heading2: Developer and Software Engineer

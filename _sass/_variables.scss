@@ -18,6 +18,9 @@ $attention-color:               #fc9493 !default;
 
 $headshot-color:                #e62146 !default;
 
+$sidebar-viewing-color:         #fc9493 !default;
+$sidebar-not-viewing-color:     #21e6c1 !default;
+
 $shadow-color:                  #0000003f !default;
 
 $spacing-unit:                  20px !default;
@@ -25,6 +28,9 @@ $spacing-unit:                  20px !default;
 // For use in javascript
 :root {
     --headshot-color: #{$headshot-color};
+    --sidebar-viewing-color: #{$sidebar-viewing-color};
+    --sidebar-not-viewing-color: #{$sidebar-not-viewing-color};
+    --dark-text-color: #{$dark-text-color};
 }
 
 

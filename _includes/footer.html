@@ -6,9 +6,9 @@
         <div class="footer-content">
             <a href="mailto:{{ site.email }}">{{ site.email }}</a>
             <div class="footer-links">
-                {%- include footer-link.html link="github" text="HunterAshburn" icon="Github-full_white.svg" -%}
-                {%- include footer-link.html link="linkedin" text="Hunter-Ashburn" icon="Linkedin-white.svg" -%}
-                {%- include footer-link.html link="resume" text="Resume" icon="resume-white.svg" -%}
+                {% include footer-link.html link="github" text="HunterAshburn" icon="Github-full_white.svg" %}
+                {% include footer-link.html link="linkedin" text="Hunter-Ashburn" icon="Linkedin-white.svg" %}
+                {% include footer-link.html link="resume" text="Resume" icon="resume-white.svg" %}
             </div>
             <p>{{ site.footer-text }}</p>
         </div>

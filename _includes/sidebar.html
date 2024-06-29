@@ -1,0 +1,14 @@
+<div class="sidebar-container">
+    <aside>
+        <ol id="sidebar-list">
+            {% for item in page.sidebar %}
+                <li>{{ item }}</li>
+                {% unless forloop.last %}
+                    <hr>
+                {% endunless %}
+            {% endfor %}
+        </ol>
+        <p id="javascript-li-font-size-baseline"></p>
+    </aside>
+</div>
+<script src="/assets/js/dynamic-sidebar.js"></script>

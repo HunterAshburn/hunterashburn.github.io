@@ -18,7 +18,13 @@ header {
 main {
     margin: $spacing-unit;
     margin-top: 85px + $spacing-unit;
-    max-width: 1600px;
+    max-width: 1300px;
+    width: 100%;
+}
+
+main.with-sidebar {
+    @include responsive-margin-left(140px, $main-margin-left-multiplier-breakpoints);
+    @include responsive-margin-right($spacing-unit * 2, $main-margin-left-multiplier-breakpoints);
 }
 
 body {
@@ -42,6 +48,15 @@ footer {
     display: flex;
     flex-direction: column;
     background-color: $card-color;
+}
+
+aside {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    max-height: 100vh;
+    padding-top: 85px + $spacing-unit;
+    padding-bottom: $spacing-unit;
 }
   
 img, picture, video, canvas, svg {
@@ -93,6 +108,7 @@ section {
 hr {
     border: none;
     border-top: 1px solid $card-color;
+    width: 100%;
 }
 
 .attention-text {
@@ -100,6 +116,8 @@ hr {
 }
 
 .default-container {
+    display: flex;
     flex: 1;
+    width: 100%;
+    justify-content: center;
 }
-
