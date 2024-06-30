@@ -1,3 +1,7 @@
+docker:
+  logo: /assets/images/logos/docker-mark-white.svg
+  text: Docker
+
 junit:
   logo: /assets/images/logos/junit5-logo.svg
   text: JUnit
