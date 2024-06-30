@@ -271,3 +271,23 @@
 .trello-box {
     @include tech-box-colors(#F7F7F7, #253858);
 }
+
+.aspnetcore-box {
+    @include tech-box-colors(#042865, #FFFFFF);
+}
+
+.postgresql-box {
+    @include tech-box-colors(#D4E2EC, #336791);
+}
+
+.redis-box {
+    @include tech-box-colors(#FF4438, #091A23);
+}
+
+.dbeaver-box {
+    @include tech-box-colors(#789FC4, #333333);
+}
+
+.docker-box {
+    @include tech-box-colors(#1D63ED, #FFFFFF);
+}

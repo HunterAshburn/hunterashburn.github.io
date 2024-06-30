@@ -2,6 +2,10 @@ rails:
   logo: /assets/images/logos/Rails-logo-vector-01.svg
   text: Ruby on Rails
 
+aspnetcore:
+  logo: /assets/images/logos/ASP.NET-Core.svg
+  text: ASP.NET Core
+
 firebase:
   logo: /assets/images/logos/firebase.svg
   text: Firebase
@@ -30,6 +34,10 @@ sqlite:
   logo: /assets/images/logos/sqlite-1.svg
   text: SQLite
 
-ssms:
-  logo: /assets/images/logos/ssms.svg
-  text: SSMS
+postgresql:
+  logo: /assets/images/logos/Postgresql_elephant.svg
+  text: PostgreSQL
+
+redis:
+  logo: /assets/images/logos/Redis_Mark_White_RGB.svg
+  text: Redis

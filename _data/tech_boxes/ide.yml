@@ -25,3 +25,8 @@ rslogix:
 ssms:
   logo: /assets/images/logos/ssms.svg
   text: SSMS
+
+dbeaver:
+  logo: /assets/images/logos/DBeaver_logo.svg
+  text: DBeaver
+
