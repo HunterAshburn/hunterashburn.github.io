@@ -1,0 +1,79 @@
+.contact {
+    padding: 0px $spacing-unit * 2;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    color: $light-text-color;
+}
+
+.contact-form img {
+    //box-shadow: 0px 0px 9px 3px $primary-color;
+    border: 8px solid $nav-menu-color;
+    margin: $spacing-unit $spacing-unit * 2;
+    align-self: center;
+}
+
+.contact-form-top {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-form-top-left {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-form-top-left-fields {
+    margin-top: auto;
+    margin-bottom: $spacing-unit;
+    padding: $spacing-unit;
+    background-color: $card-color;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+}
+
+.contact-heading {
+    margin-top: $spacing-unit / 2;
+    margin-bottom: $spacing-unit / 2;
+    color: $attention-color;
+}
+
+.contact-field {
+    margin-top: $spacing-unit / 4;
+    @include responsive-font-size(1.25em, $font-size-multiplier-breakpoints);
+    padding: $spacing-unit / 2;
+    background-color: $nav-menu-color;
+    border-radius: 10px;
+    border: none;
+    color: $grey-text-color;
+}
+
+.contact-form label {
+    color: $primary-color;
+}
+
+.contact-field1 {
+    @include responsive-height(55px, $div-size-multiplier-breakpoints);
+    margin-bottom: $spacing-unit;
+}
+
+.contact-field2 {
+    @include responsive-height(55px, $div-size-multiplier-breakpoints);
+}
+
+.contact-field3 {
+    @include responsive-height(250px, $div-size-multiplier-breakpoints);
+    resize: vertical;
+}
+
+.contact-form-bottom-field {
+    display: flex;
+    flex-direction: column;
+    background-color: $card-color;
+    padding: $spacing-unit;
+    margin-bottom: $spacing-unit;
+    border-radius: 15px;
+}
